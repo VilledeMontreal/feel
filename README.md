@@ -1,13 +1,9 @@
-[![Build Status](https://travis-ci.org/EdgeVerve/feel.svg?branch=master)](https://travis-ci.org/EdgeVerve/feel) [![Coverage Status](https://coveralls.io/repos/github/EdgeVerve/feel/badge.svg?branch=master)](https://coveralls.io/github/EdgeVerve/feel?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![npm](https://img.shields.io/npm/v/js-feel.svg)](https://npmjs.org/package/js-feel) 
-
-[![NPM](https://nodei.co/npm/js-feel.png?compact=true)](https://npmjs.org/package/js-feel)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
 
 # About
 
-[FEEL](https://github.com/EdgeVerve/feel/wiki/What-is-FEEL%3F) is an expression language based on DMN specification conformance level 3.
-Written using [PEG.js](https://pegjs.org/) - JavaScript Parser Generator.
-FEEL is a very powerful language built with the purpose of defining rules in Business Rule Engines.
-FEEL also offers an API to implement and execute Decision Table defined in excel (.xlsx)
+THIS IS A FORKED PROJECT
+PLEASE CONTRIBUTE [HERE](https://github.com/EdgeVerve/feel)
 
 # Getting Started
 
@@ -19,7 +15,7 @@ FEEL is a completely flexible library which can be used with any project to add 
 
 ```sh
 # npm install
-npm install js-feel --save
+npm install @villedemontreal/js-feel --save
 
 ```
 
@@ -60,7 +56,7 @@ Each cell in the body of the decision table has to be a valid FEEL expression. T
 ### Excel to Decision Table
 
 ```javascript
-const { decisionTable } = require('feel')();
+const { decisionTable } = require('@villedemontreal/js-feel')();
 
 const csv = decisionTable.xls_to_csv('./test/StudentFinancialPackageEligibility.xlsx');
 const decision_table = decisionTable.csv_to_decision_table(csv[0]);
@@ -81,7 +77,7 @@ decisionTable.execute_decision_table("StudentFinancialPackageEligibility", decis
 ## Using [FEEL](https://github.com/EdgeVerve/feel/wiki/What-is-FEEL%3F) Standalone
 
 ```javascript
-const {feel} = require('feel')();
+const {feel} = require('@villedemontreal/js-feel')();
 
 const rule = 'a + b - c';
 const context = {

@@ -1,5 +1,5 @@
 {
-  "name": "js-feel",
+  "name": "@villedemontreal/js-feel",
   "version": "1.4.7",
   "description": "FEEL(Friendly Enough Expression Language) based on DMN specification 1.1 for conformance level 3",
   "main": "index.js",
@@ -17,10 +17,6 @@
   "engines": {
     "node": ">=6.9.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:EdgeVerve/feel.git"
-  },
   "keywords": [
     "FEEL",
     "DMN 1.1",
@@ -31,14 +27,13 @@
     "Decision Table",
     "Rule Engine"
   ],
-  "author": "Pragyan Das <pragyandas@msn.com>",
   "dependencies": {
     "big.js": "3.2.0",
-    "bunyan": "1.8.12",
-    "lodash": "4.17.20",
-    "moment": "2.24.0",
-    "moment-timezone": "0.5.27",
-    "xlsx": "0.15.6"
+    "bunyan": "1.8.15",
+    "lodash": "4.17.21",
+    "moment": "2.29.1",
+    "moment-timezone": "0.5.34",
+    "xlsx": "0.17.5"
   },
   "devDependencies": {
     "chai": "3.4.1",

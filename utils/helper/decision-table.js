@@ -242,7 +242,7 @@ const createDecisionTable = (commaSeparatedValue) => {
 //   rootMap[id] = tree.createTree(table);
 
 //   return table;
-// }
+// } 
 
 const executeDecisionTable = (id, table, payload, cb) => {
   const graphName = payload.graphName;
@@ -250,13 +250,11 @@ const executeDecisionTable = (id, table, payload, cb) => {
   if (graphName) {
     rootMapId = `${graphName}${id}`;
   }
-  if (rootMap[rootMapId] == null || rootMap[rootMapId] === 'undefined') {
-    try {
-      rootMap[rootMapId] = tree.createTree(table);
-    } catch (e) {
-      cb(e);
-      return;
-    }
+  try {
+    rootMap[rootMapId] = tree.createTree(table);
+  } catch (e) {
+    cb(e);
+    return;
   }
   tree.traverseTree(rootMap[rootMapId], payload)
     .then(result => cb(null, result))
